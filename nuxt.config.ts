@@ -16,5 +16,7 @@ export default defineNuxtConfig({
     }
   },
   modules: [],
-  runtimeConfig: {}
+  runtimeConfig: {
+    baseUrl: "https://ollorente.github.io/app-joyeria-bogota"
+  }
 })
