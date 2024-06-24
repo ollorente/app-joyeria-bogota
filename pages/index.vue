@@ -1,5 +1,39 @@
+<script setup lang="ts">
+const title = "Home"
+const error = ref()
+const isError = ref(false)
+const loading = ref(false)
+const limit = ref(10)
+const page = ref(1)
+const items = ref<any[]>([])
+
+const getItems = async () => {
+  loading.value = true
+
+  try {
+    items.value = []
+  } catch (error: any) {
+    isError.value = true
+    error.value = error
+  } finally {
+    loading.value = false
+  }
+}
+
+onMounted(() => getItems())
+</script>
+
 <template>
-  <div>
-    <h1>Home</h1>
-  </div>
+
+  <Head>
+    <Title>{{ title }}</Title>
+  </Head>
+
+  <NuxtLayout class="">
+    <h1>{{ title }}</h1>
+
+    <UIMain :error="error" :isError="isError" :loading="loading">
+      <pre>{{ items }}</pre>
+    </UIMain>
+  </NuxtLayout>
 </template>
