@@ -14,6 +14,9 @@
             <RouterLink class="nav-link active" aria-current="page" :to="{ name: 'Categories' }">Categorías</RouterLink>
           </li>
           <li class="nav-item">
+            <RouterLink class="nav-link" :to="{ name: 'About' }">Nosotros</RouterLink>
+          </li>
+          <li class="nav-item">
             <RouterLink class="nav-link" :to="{ name: 'Contact' }">Contacto</RouterLink>
           </li>
         </ul>
