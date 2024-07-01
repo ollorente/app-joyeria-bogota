@@ -1,1 +1,0 @@
-import{_ as c,o as e,c as s}from"./index-D3Bs3XGU.js";const o={},t={class:"bg-light p-3"};function n(r,_){return e(),s("div",t," [ASIDE] ")}const i=c(o,[["render",n]]);export{i as U};
